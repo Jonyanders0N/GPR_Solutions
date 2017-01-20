@@ -16,9 +16,6 @@
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Login -->
-    <link rel="stylesheet" type="text/css" href="css/login.html">
-
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -29,6 +26,9 @@
 
     <!-- Theme CSS -->
     <link href="css/creative.css" rel="stylesheet">
+
+    <!-- Login -->
+    <link rel="stylesheet" type="text/css" href="css/login.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -79,7 +79,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1 id="homeHeading">GRP</h1>
+                <h1 id="homeHeading" class="titulo">GRP</h1>
                 <hr>
                 <p>Sistemas de identificação de veículos por chip adesivo (TAG), e controle de acesso (catracas, cancelas e afins).</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Descubra Mais</a>
@@ -268,15 +268,16 @@
             </div>
         </div>
     </section>
+
     <!-- Login -->
     <section>
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
           <div class="modal-dialog">
                 <div class="loginmodal-container">
-                    <h1>Login to Your Account</h1><br>
+                    <h1>Faça seu login</h1><br>
                   <form>
-                    <input type="text" name="user" placeholder="Username">
-                    <input type="password" name="pass" placeholder="Password">
+                    <input type="text" name="user" placeholder="Login">
+                    <input type="password" name="pass" placeholder="Senha">
                     <input type="submit" name="login" class="login loginmodal-submit" value="Login">
                   </form>
                     
