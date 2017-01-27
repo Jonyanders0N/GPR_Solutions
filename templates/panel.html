@@ -1,0 +1,117 @@
+<html ng-app="gpr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/panel.css">
+    <script src="../vendor/angular/angular.min.js"></script>    
+    <script src="../js/main.js"></script>
+    <script src="../js/controller/gpr_ctrl.js"></script>    
+  </head>
+  <body ng-controller="gprCtrl">
+    <div class="navbar navbar-default navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a ng-click="viewHome()" href="#">Home</a>
+            </li>            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Chamados </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a ng-click="viewChamado()" href="#">Abrir</a>
+                </li>
+                <li>
+                  <a ng-click="viewAcompanhar()" href="#">Acompanhar</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a ng-click="viewCadastro()" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Cadastros</a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Relatórios </a>
+              <ul class="dropdown-menu" role="menu">
+                <li>
+                  <a href="#">Relatório 1</a>
+                </li>
+                <li>
+                  <a href="#">Relatório 2</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+              <div ng-show="home" class="section">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                      <a href="#"><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                      <a href="#"><img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive"></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                      <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                      <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
+                    </div>
+                  </div>
+                </div>
+              </div>                
+                <div ng-show="criarCadastro" ng-include="'main_cadastrar.html'"></div>
+                <div ng-show="abrirChamado" ng-include="'main_chamados.html'"></div>
+                <div ng-show="followChamado" ng-include="'main_follow.html'"></div>
+            </div>
+        </div>
+    </div>
+    <footer class="section section-default">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <p style="text-align: center;">© 2012 - GPR - Todos os direitos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+<!-- Modal Delete Chamado-->
+    <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalLabel">Excluir Item</h4>
+                </div>
+                <div class="modal-body">Deseja realmente excluir este chamado? </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Sim</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+  </body>
+</html>

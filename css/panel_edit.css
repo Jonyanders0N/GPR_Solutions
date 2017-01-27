@@ -1,0 +1,21 @@
+/*@media(min-width: 500px){
+	form{
+		width: 300px;
+	}
+}
+*/
+#background{
+	background-color: white;
+}
+#menu{
+
+}
+.navbar-default{
+	background-color: white;
+	border-color: white;
+}
+#button-login{
+	border-radius: 0em !important;
+}
+
+

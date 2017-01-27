@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="gpr">
 
 <head>
 
@@ -16,6 +16,9 @@
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Bootstrap Custom CSS -->
+    <link href="css/panel_edit.css" rel="stylesheet">    
+
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
@@ -30,6 +33,10 @@
     <!-- Login -->
     <link rel="stylesheet" type="text/css" href="css/login.css">
 
+    <script src="vendor/angular/angular.min.js"></script>    
+    <script src="js/main.js"></script>
+    <script src="js/controller/gpr_ctrl.js"></script>    
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,7 +46,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" ng-controller="gprCtrl">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -276,9 +283,10 @@
                 <div class="loginmodal-container">
                     <h1>Faça seu login</h1><br>
                   <form>
-                    <input type="text" name="user" placeholder="Login">
-                    <input type="password" name="pass" placeholder="Senha">
-                    <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+                    <input type="text" ng-model="contato.login" placeholder="Login">
+                    <input type="password" ng-model="contato.password" placeholder="Senha">
+                    <button id="button-login" ng-click="fazerLogin(contato)" class="btn btn-primary btn-block login loginmodal-submit">Entrar</button>
+                    {{contato}}
                   </form>
                     
                   <div class="login-help">
