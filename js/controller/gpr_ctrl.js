@@ -9,15 +9,9 @@ angular.module('gpr').controller('gprCtrl', function($scope){
 
 
 	$scope.home = true;
-	$scope.viewSite = true;
 
 	$scope.doLogin = function(contato){
-		if(contato.login == usuarios[0].login && contato.password == usuarios[0].password){
-			$scope.viewSite = false;
-			$scope.viewPanel = true;
-		}else{
-			alert("Login ou senha incorretos");
-		}
+		
 	};
 	$scope.viewHome = function(){
 		$scope.criarCadastro = false;
